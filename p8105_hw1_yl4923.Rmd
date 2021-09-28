@@ -28,5 +28,18 @@ fac_to_num <- as.numeric(pull(problem_1, tshirt_factor))
 Factor vector is converted given the numeric codes are assigned to its 3 factor levels, which then can be taken **mean** successfully. Logical variable is assigned to 0 or 1 to False and True. However, the character variable still introduces NAs, which means it cannot be converted to numeric variable. In this case, if numbers are stored in character vector instead, such as "1" rather than "word" in my example, it would be convertible.
 
 
+### Problem 2
+```{r problem2 descriptive data}
+data("penguins", package = "palmerpenguins")
+```
+Here is a data about penguins including variables: `r names(penguins)` with `r nrow(penguins)` rows and `r ncol(penguins)` columns. 
+
+The mean of flipper length is `r mean(penguins$flipper_length_mm,na.rm=TRUE)`. 
+
+
+
+
+
+
 
 
