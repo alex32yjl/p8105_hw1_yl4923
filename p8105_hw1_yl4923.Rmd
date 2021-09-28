@@ -18,3 +18,15 @@ mean(pull(problem_1, character_10))
 mean(pull(problem_1, tshirt_factor))
 ```
 Since the arithmetic operations only act on numbers, taking the mean of variables would only work for numeric and logical variables as logic T/F are corresponding to 1/0 in mean function. While the character and factor variables are not stored as numeric values, both variables are not operable.  
+
+#we then try to convert character and factor data to numeric.
+```{r problem1 data type conversion, eval=FALSE}
+logic_to_num <- as.numeric(pull(problem_1,gr_than_0))
+char_to_num <- as.numeric(pull(problem_1, character_10))
+fac_to_num <- as.numeric(pull(problem_1, tshirt_factor))
+```
+Factor vector is converted given the numeric codes are assigned to its 3 factor levels, which then can be taken **mean** successfully. Logical variable is assigned to 0 or 1 to False and True. However, the character variable still introduces NAs, which means it cannot be converted to numeric variable. In this case, if numbers are stored in character vector instead, such as "1" rather than "word" in my example, it would be convertible.
+
+
+
+
