@@ -36,6 +36,10 @@ Here is a data about penguins including variables: `r names(penguins)` with `r n
 
 The mean of flipper length is `r mean(penguins$flipper_length_mm,na.rm=TRUE)`. 
 
+```{r problem2 scatterplot, echo=TRUE}
+ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, col = species)) + geom_point()
+ggsave("p8105_hw1_yl4923_scatterplot.pdf", height = 4, width = 6)
+```
 
 
 
